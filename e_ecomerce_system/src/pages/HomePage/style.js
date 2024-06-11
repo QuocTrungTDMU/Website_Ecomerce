@@ -8,4 +8,5 @@ export const WrapperTypeProduct = styled.div`
     justify-content: flex-start;
     border-bottom: 1px solid red;
     height: 44px;
+     margin-left: 120px;
 `
