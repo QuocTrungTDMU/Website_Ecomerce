@@ -1,14 +1,13 @@
 import React from "react";
 import TypeProducts from "../../components/TypeProduct/TypeProducts";
-import { WrapperButtonMode, WrapperTypeProduct } from "./style";
+import { WrapperButtonMode, WrapperProducts, WrapperTypeProduct } from "./style";
 import SliderComponent from "../../components/SliderComponent/SliderComponent";
 import slider1 from "../../assets/image/slider1.png";
 import slider2 from "../../assets/image/slider2.jpg";
 import slider3 from "../../assets/image/slider3.jpg";
 import slider4 from "../../assets/image/slider4.jpg";
 import CardComponent from "../../components/CardComponent/CardComponent";
-import NavbarComponent from "../../components/NavbarComponent/NavbarComponent";
-import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
+
 
 const HomePage = () => {
   const arr = ["Tu Lanh", "TV", "May Giat", "Laptop"];
@@ -25,21 +24,13 @@ const HomePage = () => {
         id="container"
         style={{
           backgroundColor: "#efefef",
-          padding: "0 120px",
+          padding: "0 100px",
           height: "1000px",
           width:'100%', 
         }}
       >
         <SliderComponent arrImages={[slider1, slider2, slider3, slider4]} />
-        <div
-          style={{
-            marginTop: "20px",
-            display: "flex",
-            alignItems: "center",
-            gap:'20px',
-            flexWrap: "wrap",
-          }}
-        >
+        <WrapperProducts>
           <CardComponent />
           <CardComponent />
           <CardComponent />
@@ -47,7 +38,11 @@ const HomePage = () => {
           <CardComponent />
           <CardComponent />
           <CardComponent />
-        </div>
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+         </WrapperProducts>
         <div style={{width:'100%',display:'flex',justifyContent:'center',marginTop:'10px'}}>
           <WrapperButtonMode
             textButton="Xem thêm"

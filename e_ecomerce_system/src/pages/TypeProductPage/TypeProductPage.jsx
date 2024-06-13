@@ -1,19 +1,43 @@
-import React from 'react'
-import NavbarComponent from '../../components/NavbarComponent/NavbarComponent'
-import CardComponent from '../../components/CardComponent/CardComponent'
-import { Col, Row } from 'antd'
+import React from "react";
+import NavbarComponent from "../../components/NavbarComponent/NavbarComponent";
+import CardComponent from "../../components/CardComponent/CardComponent";
+import { Col, Pagination, Row } from "antd";
+import { WrapperNavbar, WrapperProducts } from "./style";
 
 function TypeProductPage() {
+  const onChange = () => {};
   return (
-    <Row style={{padding:'0 120px', background:'#efefef',flexWrap:'nowrap',paddingTop:'10px'}}>
-        <Col span={4} style={{background:'white',marginRight:'10px',padding:'10px',borderRadius:'6px'}}>
-        <NavbarComponent />
+    <div style={{ padding: "0 100px", background: "#efefef" }}>
+      <Row
+        style={{
+          padding: "0 100px",
+          background: "#efefef",
+          flexWrap: "nowrap",
+          paddingTop: "10px",
+        }}
+      >
+        <WrapperNavbar>
+          <NavbarComponent />
+        </WrapperNavbar>
+        <Col  span={20}>
+          <WrapperProducts>
+            <CardComponent />
+            <CardComponent />
+            <CardComponent />
+            <CardComponent />
+            <CardComponent />
+            <CardComponent />
+            <CardComponent />
+            <CardComponent />
+          </WrapperProducts>
+          <Pagination defaultCurrent={2} total={100} 
+          onChange={onChange} style={{textAlign:'center', marginTop:'10px', }}/>
         </Col>
-        <Col span={20}>
-        <CardComponent />
-        </Col>
-    </Row>
-  )
+        
+      </Row>
+      
+    </div>
+  );
 }
 
-export default TypeProductPage
+export default TypeProductPage;

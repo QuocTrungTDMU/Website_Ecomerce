@@ -8,6 +8,7 @@ import {
 } from "./style";
 import { StarOutlined } from "@ant-design/icons";
 import logo from "../../assets/image/logo.png";
+import ip from '../../assets/image/avt-iphone-14-pro-max-deep-purple.png'
 
 const CardComponent = () => {
   return (
@@ -18,8 +19,8 @@ const CardComponent = () => {
       bodyStyle={{ padding: "10px" }}
       cover={
         <img
-          alt="example"
-          src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+          alt="iphone"
+          src={ip}
         />
       }
     >
