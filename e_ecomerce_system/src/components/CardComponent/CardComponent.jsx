@@ -5,6 +5,7 @@ import {
   WrapperDiscountText,
   WrapperPriceText,
   WrapperReportText,
+  WrapperStyleTextSell,
 } from "./style";
 import { StarOutlined } from "@ant-design/icons";
 import logo from "../../assets/image/logo.png";
@@ -42,7 +43,7 @@ const CardComponent = () => {
           <span>4.9</span>{" "}
           <StarOutlined style={{ fontSize: "12px", color: "yellow" }} />
         </span>
-        <span>| Đã bán 1000+</span>
+        <WrapperStyleTextSell>| Đã bán 1000+</WrapperStyleTextSell>
       </WrapperReportText>
       <WrapperPriceText>
         20.000.000d
