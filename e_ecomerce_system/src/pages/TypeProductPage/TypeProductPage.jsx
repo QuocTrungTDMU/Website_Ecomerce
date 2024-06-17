@@ -8,7 +8,7 @@ function TypeProductPage() {
   const onChange = () => {};
   return (
     <div style={{width: '100%', background:'#efefef'}}>
-      <div style={{ width:'1500px', margin:'0 auto' }}>
+      <div style={{ width:'1400px', margin:'0 auto' }}>
         <Row
           style={{
             padding: "0 100px",
