@@ -8,7 +8,8 @@ import "antd/dist/reset.css";
 function App() {
   return (
     <div>
-      {routes.isShowHeader && <HeaderComponent />}
+      {/* {routes.isShowHeader && <HeaderComponent />} */}
+      <HeaderComponent />
       <Router>
         <Routes>
           {routes.map((route) => {
@@ -16,9 +17,10 @@ function App() {
             const Layout = routes.isShowHeader ? DefaultComponent : Fragment;
             return (
               <Route
+                key={route.path}
                 path={route.path}
                 element={
-                  <>  
+                  <>
                     <Page />
                     <Layout />
                   </>
@@ -26,8 +28,6 @@ function App() {
               />
             );
           })}
-          {/* <Route path='order' element={<Order/>}/>
-          <Route path='product' element={<Product/>}/> */}
         </Routes>
       </Router>
     </div>

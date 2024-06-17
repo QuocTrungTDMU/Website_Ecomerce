@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { WrapperContainerLeft, WrapperContainerRight, WrapperTextLight } from "./style";
 import InputFormComponent from "../../components/InputFormComponent/InputFormComponent";
 import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 import logologin from "../../assets/image/logo_login.png";
 import { Image } from "antd";
+import { EyeFilled, EyeInvisibleFilled } from '@ant-design/icons'
 
 const SignInPage = () => {
+  const [isShowPassword, setIsShowPassword] = useState(false)
   return (
     <div
       style={{
@@ -29,7 +31,23 @@ const SignInPage = () => {
           <h1>Xin chào</h1>
           <p>Đăng nhập hoặc tạo tài khoản</p>
           <InputFormComponent style={{marginBottom:'10px'}} placeholder="abcd@gmail.com"/>
-          <InputFormComponent placeholder='password'/>
+          <div style={{position:'relative'}}>
+            <span style={{
+              zIndex: 10,
+              position: 'absolute',
+              top: '4px',
+              right:'8px'
+            }}
+            >{
+              isShowPassword ? (
+                <EyeFilled/>
+              ) : (
+                <EyeInvisibleFilled/>
+              )
+            }
+            </span>
+             <InputFormComponent placeholder='password' type={isShowPassword ? "text" : "password"}/>
+          </div>
           <ButtonComponent
             size={40}
             styleButton={{

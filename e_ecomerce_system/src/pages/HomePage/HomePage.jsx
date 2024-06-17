@@ -13,25 +13,26 @@ const HomePage = () => {
   const arr = ["Tu Lanh", "TV", "May Giat", "Laptop"];
   return (
     <>
-      <div style={{}}>
+      <div style={{width:'1270px',margin:'0 auto'}}>
         <WrapperTypeProduct>
           {arr.map((item) => {
             return <TypeProducts name={item} key={item} />;
           })}
         </WrapperTypeProduct>
       </div>
+    <div className='body' style={{width:'100%',backgroundColor:'#efefef'}}>
       <div
         id="container"
         style={{
           backgroundColor: "#efefef",
           padding: "0 100px",
           height: "1000px",
-          width:'100%', 
+          width:'1270px',
+          margin:'0 auto', 
         }}
       >
         <SliderComponent arrImages={[slider1, slider2, slider3, slider4]} />
         <WrapperProducts>
-          <CardComponent />
           <CardComponent />
           <CardComponent />
           <CardComponent />
@@ -58,9 +59,11 @@ const HomePage = () => {
           />
         </div>
         {/* <NavbarComponent/> */}
+        </div>
       </div>
     </>
   );
 };
 
 export default HomePage;
+
