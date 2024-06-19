@@ -18,7 +18,7 @@ function TypeProductPage() {
           }}
         >
           <WrapperNavbar>
-            <NavbarComponent />
+             <NavbarComponent />
           </WrapperNavbar>
           <Col span={20}>
             <WrapperProducts>
